@@ -22,3 +22,17 @@ describe("Test enqueue method", () => {
     expect(queue).toHaveProperty("queue", ["Tom", "Bob"]);
   });
 });
+
+describe("Test dequeue method", () => {
+  it("should remove first item from array", () => {
+    queue.queue = ["Tom", "Bob"];
+    queue.dequeue();
+    expect(queue).toHaveProperty("queue", ["Bob"]);
+  });
+  it("should remove 2 items from array", () => {
+    queue.queue = ["Tom", "Bob", "Sarah"];
+    queue.dequeue();
+    queue.dequeue();
+    expect(queue).toHaveProperty("queue", ["Sarah"]);
+  });
+});

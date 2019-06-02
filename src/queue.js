@@ -6,6 +6,10 @@ class Queue {
   enqueue(item) {
     this.queue.push(item);
   };
+
+  dequeue() {
+    this.queue.shift();
+  }
 }
 
 module.exports = { Queue };
