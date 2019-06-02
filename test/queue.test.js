@@ -36,3 +36,13 @@ describe("Test dequeue method", () => {
     expect(queue).toHaveProperty("queue", ["Sarah"]);
   });
 });
+
+describe("Test peek method", () => {
+  it("should return first item from array", () => {
+    queue.queue = ["Tom", "Bob"];
+    expect(queue.peek()).toEqual('Tom');
+  });
+  it('should return undefined if array is empty', () => {
+    expect(queue.peek()).toEqual(undefined);
+  });
+});

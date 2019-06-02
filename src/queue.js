@@ -10,6 +10,10 @@ class Queue {
   dequeue() {
     this.queue.shift();
   }
+
+  peek() {
+    return this.queue[0];
+  }
 }
 
 module.exports = { Queue };
